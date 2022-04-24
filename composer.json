@@ -1,0 +1,29 @@
+{
+    "name": "lvyac/laravel-admin-qrcode",
+    "description": "laravel-admin 生成二维码扩展",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lvyac",
+            "email": "admin@lvyac.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6",
+        "simplesoftwareio/simple-qrcode": "~2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lvyac\\Qrcode\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lvyac\\Qrcode\\QrcodeProvider"
+            ]
+        }
+    }
+}
