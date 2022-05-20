@@ -15,7 +15,7 @@ class Qrcode extends AbstractDisplayer
         $img = QrcodeService::getQrcode($this->value, $migrate, $size);
         $base64 = chunk_split(base64_encode($img));
 
-        Admin::script("$('[data-toggle=\"popover\"]').popover()");
+        Admin::script("$('[data-toggle=\"popover\"]').popover();");
         $href = url('/lvyac/qrcode/download?resource=' . urlencode($this->value) . '&margin=' . $migrate . '&size=' . $size);
 
         $html = "<div><img src='data:image/jpg/png/gif;base64,{$base64}' width='{$width}' /></div><div><a href='{$href}' class='btn btn-primary btn-block btn-sm' target='_blank'>下载</a></div>";
